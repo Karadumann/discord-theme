@@ -6,7 +6,11 @@
  * @source https://github.com/karaduman/discord-theme
  */
 
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
 
+/* Theme imports */
+@import url("https://discordstyles.github.io/SoftX/RadialGlow.css");
 
 /* Theme Base */
 :root {
@@ -15,11 +19,26 @@
     --user-modal-image: var(--background-image);
     --user-popout-image: var(--background-image);
 
+    /* Layout Settings */
+    --channels-width: 240px;
+    --guilds-width: 72px;
+    --members-width: 240px;
+    --server-size: 48px;
+    --chat-avatar-size: 32px;
+    --glow-intensity: 0.5;
+    --opacity: 1;
+    --font: "Inter";
+
+    /* Roundness Settings */
+    --avatar-roundness: 50%;
+    --server-roundness: 50%;
+
     /* Primary Colors */
     --primary-color: #00a8ff;
     --secondary-color: #00d2ff;
     --hover-color: #0984e3;
     --tooltip-color: #0652DD;
+    --accent: 0, 168, 255;
 
     /* Status Colors */
     --green-color: #20bf6b;
@@ -315,4 +334,126 @@
   height: calc(100% - 4px);
   border-radius: var(--rs-avatar-shape);
   box-shadow: inset 0 0 0 2px var(--rs-self-speaking-colour, #57d39b), inset 0 0 0 3px var(--background-secondary);
+}
+
+/* Optimized Layout Styles */
+.app-2CXKsg {
+    font-family: var(--font), sans-serif !important;
+}
+
+.guilds-2JjMmN {
+    width: var(--guilds-width) !important;
+}
+
+.sidebar-1tnWFu {
+    width: var(--channels-width) !important;
+}
+
+.members-3WRCEx {
+    width: var(--members-width) !important;
+}
+
+/* Server List Enhancement - Optimized */
+.listItem-3SmSlK {
+    width: var(--server-size) !important;
+    height: var(--server-size) !important;
+    transition: transform 0.2s ease !important;
+}
+
+.listItem-3SmSlK:hover {
+    transform: scale(1.1) !important;
+}
+
+/* Simplified Glow Effects */
+.selected-1Drb7Z {
+    background: rgba(var(--accent), 0.1) !important;
+}
+
+/* Message Hover Effects - Optimized */
+.message-2CShn3 {
+    transition: background-color 0.2s ease !important;
+    padding: 8px 16px !important;
+    margin: 4px 0 !important;
+    border-radius: 8px !important;
+}
+
+.message-2CShn3:hover {
+    background-color: var(--background-modifier-hover) !important;
+}
+
+/* Member List - Optimized */
+.member-2gU6Ar {
+    transition: background-color 0.2s ease !important;
+    border-radius: 4px !important;
+    margin: 2px 8px !important;
+}
+
+.member-2gU6Ar:hover {
+    background-color: var(--background-modifier-hover) !important;
+}
+
+/* Channel List - Optimized */
+.containerDefault-YUSmu3 {
+    transition: background-color 0.2s ease !important;
+    margin: 2px 0 !important;
+}
+
+.containerDefault-YUSmu3:hover {
+    background-color: var(--background-modifier-hover) !important;
+}
+
+/* Glow Effects */
+.selected-1Drb7Z {
+    position: relative;
+}
+
+.selected-1Drb7Z::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(var(--accent), 0.1);
+    border-radius: inherit;
+    box-shadow: 0 0 calc(var(--glow-intensity) * 15px) calc(var(--glow-intensity) * 5px) rgba(var(--accent), 0.2);
+    pointer-events: none;
+}
+
+/* Chat Avatar Size */
+.avatar-2e8lTP {
+    width: var(--chat-avatar-size) !important;
+    height: var(--chat-avatar-size) !important;
+}
+
+/* User Area Fix - Horizontal */
+.panels-3wFtMD {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    padding: 8px !important;
+}
+
+.container-YkUktl {
+    flex-direction: row !important;
+    padding: 0 !important;
+}
+
+.avatarWrapper-1B9FTW {
+    margin-right: 8px !important;
+}
+
+.nameTag-sc-gpq {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Fix for buttons in user area */
+.button-12Fmur {
+    margin: 0 4px !important;
+    padding: 8px !important;
+}
+
+.button-12Fmur:hover {
+    background-color: var(--background-modifier-hover) !important;
 } 
